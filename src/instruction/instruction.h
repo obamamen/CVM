@@ -9,7 +9,7 @@ typedef enum instructionSet{
     ADD,            // addition (ra = 1 + 2) {1,2}
     SUB,            // subtract (ra = 1 - 2) {1,2}
     MULT,           // multiply (ra = 1 * 2) {1,2}
-    JUMPI,          // jump if (jump if ra == 1) {poitoin}
+    JUMPI,          // jump if (jump if ra != 0) {poitoin}
     CMP,            // compare a and b (-1 less, 0 equal, 1 greater)  puts the answer into C
     MOVER,          // move register to mem {register, memoryPos}
     MOVEM,          // move memory to reg {register, memoryPos}

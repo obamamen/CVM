@@ -4,25 +4,24 @@
 
 
 #define registerCount 3
-#define ramSize 32
-#define instructionSize 16
+#define ramSize 16
+#define instructionSize 256
 
-#define emptyInstruction {0,{0,0}}
+#define emptyInstruction {0,0,0}
 
 typedef unsigned char opcode;
+typedef unsigned char byte;
 
 typedef struct instruction{
-    opcode op;
-    unsigned char operands[2];
+    opcode op : 4;
+    byte operand1 : 8;
+    byte operand2 : 8;
 }instruction;
 
 
-
-typedef unsigned char byte;
-
 typedef struct vm{
     int programCounter;
-    int registers[registerCount];
+    byte registers[registerCount];
     byte memory[ramSize];
     instruction instructions[instructionSize];
     int running;
