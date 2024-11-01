@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C: Compile all C files",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-Command",
+                "gcc -fdiagnostics-color=always (Get-ChildItem -Recurse -Filter '*.c').FullName -o my_program"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Compiles all C files from current directory and subdirectories."
+        }
+    ]
+}
