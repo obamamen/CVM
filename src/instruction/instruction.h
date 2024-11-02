@@ -14,6 +14,7 @@ typedef enum instructionSet{
     MOVER,          // move register to mem {register, memoryPos}
     MOVEM,          // move memory to reg {register, memoryPos}
     LOAD,           // load number into memory {memoryPos,number}
+    IOP,            // instruction for output , {memoryPos, type} (0:char,1:string,2:short,3:int,4:charNumber)
 
     
     // end of instruction set

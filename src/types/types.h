@@ -3,7 +3,13 @@
 #define registerA 0
 
 
-#define registerCount 3
+#define Char 0
+#define String 1
+#define Short 2
+#define Int 3
+#define CharNumber 4
+
+#define registerCount 8
 #define ramSize 16
 #define instructionSize 256
 
@@ -21,7 +27,7 @@ typedef struct instruction{
 
 typedef struct vm{
     int programCounter;
-    byte registers[registerCount];
+    int registers[registerCount];
     byte memory[ramSize];
     instruction instructions[instructionSize];
     int running;
